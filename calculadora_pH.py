@@ -13,10 +13,14 @@ def concentracao_acido_base_do_sistema():
 
 def calculando_nova_concentracao_acido(concentracao_acido, concentracao_base, volume_acido, volume_base):
 
-    if volume_base != 0:
+    if volume_base < volume_acido:
         moles_acido = concentracao_acido*volume_acido - concentracao_base*volume_base
         concentracao_acido = moles_acido/(volume_acido + volume_base)
- 
+    
+    elif volume_base > volume_acido:
+        moles_base = volume_base*concentracao_base - volume_acido*concentracao_acido 
+        concentracao_base = moles_base/(volume_acido + volume_base)
+
     else:
         concentracao_acido = concentracao_acido
 
@@ -29,14 +33,20 @@ def calculando_pH_do_sistema():
     concentracao_acido, concentracao_base, volume_acido, volume_base = concentracao_acido_base_do_sistema()
     concentracao_acido, concentracao_base, volume_acido, volume_base = calculando_nova_concentracao_acido(concentracao_acido, concentracao_base, volume_acido, volume_base)
 
-    if concentracao_acido != 0:
+    if volume_acido > volume_base:
         pH = -1*math.log(concentracao_acido, 10)
         pH = round(pH, 2)
         print(f'O pH do meio é: {pH}')
 
-    if concentracao_acido == 0:
+    if volume_acido == volume_base:
         pH = 7.0
         print(f'Somente resta o equilíbrio da água, pH: {pH}')
+    
+    elif volume_base > volume_acido:
+        pOH = -1*math.log(concentracao_base, 10)
+        pH = 14 - pOH 
+        print(f'O pH do meio é: {pH}')
+    
 
     return pH 
 
