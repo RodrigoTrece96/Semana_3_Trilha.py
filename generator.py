@@ -1,4 +1,4 @@
-# entendo o generator e a diferença de yield e return
+# entendo o generator e uma função: yield e return
 
 tupla = (1,2,3,4,5)
 
