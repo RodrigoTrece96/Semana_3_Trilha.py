@@ -24,7 +24,7 @@ class Cliente:
         pass
 
     def comprar_paes(self, quantidade, Padeiro): # Métodos
-        preco_pao = quantidade * 0.5
+        preco_pao = quantidade * 1.2
 
         if quantidade > Padeiro.paes: 
             print('Não há pão o suficiente para comprar')
@@ -45,4 +45,4 @@ O padeiro {Padeiro.nome} agradece e sua quantidade de pão restante é {Padeiro.
 padeiro1 = Padeiro('Jonathan')
 padeiro1.assar_paes(6)
 cliente1 = Cliente('Sérgia', 10)
-cliente1.comprar_paes(1 ,padeiro1)
+cliente1.comprar_paes(7 ,padeiro1)
