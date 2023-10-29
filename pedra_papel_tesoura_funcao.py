@@ -33,7 +33,8 @@ while True:
     if jogada_usuario == jogada_computador: 
         print('Empate')
         rodada += 1
-        continue 
+        continue # fato legal sobre o continue: ele evita que coisas do loop que não serão importantes para aquela iteração 
+                 # sejam lidas pelo código. Então deixa a leitura do código mais sucinta e efetiva 
 
     # Caso em que o jogador vence
     if (jogada_usuario == 'pedra' and jogada_computador == 'tesoura') or \
