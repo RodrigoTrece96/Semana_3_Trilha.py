@@ -16,7 +16,8 @@ def jogadas_possiveis():
 
     return possibilidades, jogada_usuario, jogada_computador
 
-rodada, score_usuario, score_computador = condicoes_iniciais()
+rodada, score_usuario, score_computador = condicoes_iniciais() # chamar a função aqui, pois se estiver dentro do while, 
+                                                               # a cada iteração os valores voltariam para zero
 
 while True:
 
