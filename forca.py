@@ -1,5 +1,3 @@
-# Forca no python 
-
 import random
 
 def condicoes_iniciais(): # Desempacotado
@@ -13,7 +11,7 @@ def condicoes_iniciais(): # Desempacotado
 
 palavra, rodada = condicoes_iniciais()
 
-def andamento_jogo():
+def andamento_jogo(): # Desempacotado 
     tamanho = '_' * len(palavra) 
     letras_corretas = [] # Aqui serao adicionadas as letras corretas  
     return tamanho, letras_corretas
@@ -53,9 +51,9 @@ while True:
         if jogada_usuario == palavra:
             print('Parabéns, você venceu de forma antecipada!')
         else:
-            print('Que pena, o chute estava incorreto! Mas você pode continuar tentando.')
-    
-    
+            print('Que pena, o chute estava incorreto!')
+        break 
+           
     if palavra_usuario == palavra:
         print('Parabéns, você venceu!')
         break
