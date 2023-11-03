@@ -20,11 +20,16 @@ def andamento_jogo():
 
 tamanho, letras_corretas = andamento_jogo()
 
+numero_letras = tamanho.count('_')
+print(f'O número de letras é: {numero_letras}')
+
 print(f'O tamanho da palavra é: {tamanho}')
+
+print('Instruções: caso você saiba a resposta antes, digite: "chute" ')
 
 while True:
 
-    rodada += 1 
+    rodada += 1
 
     print(f'Rodada: {rodada}')
     jogada_usuario = input('Digite uma letra: ').lower()
@@ -42,6 +47,14 @@ while True:
             palavra_usuario += '_'
 
     print(f'Seu progresso está assim: {palavra_usuario}')
+    
+    if jogada_usuario == 'chute':
+        jogada_usuario = input('Digite seu chute: ').lower()
+        if jogada_usuario == palavra:
+            print('Parabéns, você venceu de forma antecipada!')
+        else:
+            print('Que pena, o chute estava incorreto! Mas você pode continuar tentando.')
+    
     
     if palavra_usuario == palavra:
         print('Parabéns, você venceu!')
