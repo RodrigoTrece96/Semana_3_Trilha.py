@@ -1,3 +1,6 @@
+# Adicionar funcionalidade de dica: se pedir dica, cai em uma condicional que printa
+# uma explicação geral do que a palavra está relacionada
+
 import random
 
 def condicoes_iniciais(): # Desempacotado
