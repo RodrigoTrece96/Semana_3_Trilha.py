@@ -1,6 +1,8 @@
 # O que falta adicionar mais interações entre as pessoas: relacionar as interações com os atributos do __init__ e usar 
 # condicionais para algumas interações  
 
+# Os métodos vão ser troca de dinheiro, compra de drink e compra de comida, possivelmente
+
 
 import random 
 
