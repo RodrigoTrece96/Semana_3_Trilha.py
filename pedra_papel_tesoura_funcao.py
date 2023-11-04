@@ -21,14 +21,16 @@ rodada, score_usuario, score_computador = condicoes_iniciais() # chamar a funç�
 
 while True:
 
+    print(f'Score >> {score_usuario}:{score_computador}')
+    print(f'Rodada: {rodada}') 
+    
     possibilidades, jogada_usuario, jogada_computador = jogadas_possiveis()
 
-    print(f'Score >> {score_usuario}:{score_computador}')
-    print(f'Rodada: {rodada}')  
+    print(f'A jogada do computador foi: {jogada_computador}') 
 
     if score_usuario == 3 or score_computador == 3:
         print(f'A partida acabou. O score ficou: {score_usuario}:{score_computador} e o número de rodadas foram {rodada}')
-        break 
+        break
 
     # Caso em que empata
     if jogada_usuario == jogada_computador: 
