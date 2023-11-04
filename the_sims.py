@@ -6,23 +6,50 @@
 # A ideia é ter um script para cada cenário: uma historinha mesmo. Espero que essa ideia possa servir para 
 # fixar o conteúdo de classes! 
 
-class pessoa1:
+import random 
+
+cidade = ('Rio de Janeiro', 'Duque de Caxias')
+lugar = ('Mantiquira', 'SME', 'Santa Cruz da Serra', 'Mr.Copão', 'RioSul', 'Fundão', '485', 'Praia de Copa')
+
+class Pessoa1:
     def __init__(self):
-        self.cidade: ('Rio de Janeiro', 'Duque de Caxias')
-        self.lugar: ('Mantiquira', 'SME', 'Santa Cruz da Serra', 'Mr.Copão', 'RioSul', 'Fundão', '485', 
-                    'praia de copa')
+        pass
     
-    def descricoes(self, sexo, nome, apelido, idade, comida_favorita):
-        self.tipo: sexo
-        self.nome: nome
-        self.apelido: apelido
-        self.idade: idade
-        self.comida_favorita: comida_favorita
+    def descricoes1(self, sexo, nome, apelido, idade, comida_favorita):
+        self.tipo = sexo
+        self.nome = nome
+        self.apelido = apelido
+        self.idade = idade
+        self.comida_favorita = comida_favorita
 
     def tempo_livre_1(self, hobbies, saidas_casuais, status_civil, dinheiro):
-        self.hobbies: hobbies
-        self.saidas_casuais: saidas_casuais
-        self.status_civil: status_civil
-        self.dinheiro: dinheiro
+        self.hobbies = hobbies
+        self.saidas_casuais = saidas_casuais
+        self.status_civil = status_civil
+        self.dinheiro = dinheiro
     
+
+class Pessoa2():
+    def __init__(self):
+        pass
     
+    def descricoes2(self, sexo, nome, apelido, idade, comida_favorita):
+        self.tipo = sexo
+        self.nome = nome
+        self.apelido = apelido
+        self.idade = idade
+        self.comida_favorita = comida_favorita
+
+    def tempo_livre_2(self, hobbies, saidas_casuais, status_civil, dinheiro):
+        self.hobbies = hobbies
+        self.saidas_casuais = saidas_casuais
+        self.status_civil = status_civil
+        self.dinheiro = dinheiro
+
+def escolhendo_historinha(): 
+    local_de_encontro = random.choice(cidade)
+    print(f'Cidade {local_de_encontro}')
+    return local_de_encontro 
+
+
+escolhendo_historinha()
