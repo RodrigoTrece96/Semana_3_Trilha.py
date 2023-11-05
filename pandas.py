@@ -1,2 +1,3 @@
-import pandas as pd 
+import pandas as pd
 
+pd.read_csv('teste.csv')

@@ -38,11 +38,11 @@ class Cliente:
             Padeiro.dinheiro = preco_pao 
             Padeiro.paes -= quantidade 
             print(f'Compra realizada!\nO número de pães de {self.nome} é {self.paes}. \
-O padeiro {Padeiro.nome} agradece e sua quantidade de pão restante é {Padeiro.paes}. Volte sempre!')
+O padeiro {padeiro1.nome} agradece e sua quantidade de pão restante é {padeiro1.paes}. Volte sempre!')
         pass 
 
 
 padeiro1 = Padeiro('Jonathan')
 padeiro1.assar_paes(6)
 cliente1 = Cliente('Sérgia', 10)
-cliente1.comprar_paes(7 ,padeiro1)
+cliente1.comprar_paes(5 ,padeiro1)
