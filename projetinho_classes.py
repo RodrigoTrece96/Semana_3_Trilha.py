@@ -3,6 +3,8 @@
 
 # Os métodos vão ser troca de dinheiro, compra de drink e compra de comida, possivelmente
 
+# Tentar depois criar um novo metodo para hobbie, dinheiro e saidas casuais 
+
 
 import random 
 import time 
